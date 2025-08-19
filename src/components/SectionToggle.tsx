@@ -8,11 +8,11 @@ interface SectionToggleProps {
 
 const SectionToggle = ({ activeSection, onToggle }: SectionToggleProps) => {
   return (
-    <div className="flex items-center justify-center gap-6 mb-12">
+    <div className="flex items-center justify-center mb-12">
       <div className="flex items-center space-x-4 bg-card border border-border rounded-full p-2">
         <Label 
           htmlFor="section-toggle" 
-          className={`px-4 py-2 rounded-full font-medium transition-all duration-300 cursor-pointer ${
+          className={`px-6 py-3 rounded-full font-medium transition-all duration-300 cursor-pointer ${
             activeSection === "web2" 
               ? "bg-web2 text-white shadow-web2" 
               : "text-muted-foreground hover:text-foreground"
@@ -31,7 +31,7 @@ const SectionToggle = ({ activeSection, onToggle }: SectionToggleProps) => {
         
         <Label 
           htmlFor="section-toggle" 
-          className={`px-4 py-2 rounded-full font-medium transition-all duration-300 cursor-pointer ${
+          className={`px-6 py-3 rounded-full font-medium transition-all duration-300 cursor-pointer ${
             activeSection === "web3" 
               ? "bg-web3 text-white shadow-web3" 
               : "text-muted-foreground hover:text-foreground"
@@ -40,10 +40,6 @@ const SectionToggle = ({ activeSection, onToggle }: SectionToggleProps) => {
         >
           Web3 Projects
         </Label>
-      </div>
-      
-      <div className="text-sm text-muted-foreground">
-        {activeSection === "web2" ? "Traditional Web Development" : "Blockchain & Decentralized Apps"}
       </div>
     </div>
   );

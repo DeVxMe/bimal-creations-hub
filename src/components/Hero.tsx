@@ -18,9 +18,9 @@ const Hero = () => {
       <div className="absolute bottom-20 right-20 w-96 h-96 bg-accent/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 items-center">
           {/* Left content */}
-          <div className="space-y-8 animate-fade-in">
+          <div className="space-y-6 animate-fade-in">
             <div className="space-y-4">
               <div className="inline-block">
                 <span className="text-sm font-medium text-primary bg-primary/10 px-3 py-1 rounded-full">
@@ -61,8 +61,12 @@ const Hero = () => {
               })}
             </div>
             
-            <div className="flex gap-4 pt-4">
-              <Button size="lg" className="bg-gradient-primary hover:shadow-primary">
+            <div className="flex gap-4 pt-2">
+              <Button 
+                size="lg" 
+                className="bg-gradient-primary hover:shadow-primary"
+                onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+              >
                 View Projects
               </Button>
               <Button variant="outline" size="lg" className="hover:bg-primary hover:text-primary-foreground">
@@ -74,7 +78,7 @@ const Hero = () => {
           {/* Right content - Profile image */}
           <div className="flex justify-center lg:justify-end animate-slide-up" style={{ animationDelay: '0.3s' }}>
             <div className="relative">
-              <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-primary/20 shadow-glow">
+              <div className="w-72 h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden border-4 border-primary/20 shadow-glow">
                 <img
                   src="https://res.cloudinary.com/dvb8lhl7t/image/upload/v1755016385/bimal_fwytql.jpg"
                   alt="Bimal Chalise"

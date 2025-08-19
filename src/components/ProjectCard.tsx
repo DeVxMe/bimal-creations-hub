@@ -81,16 +81,10 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
           </div>
         )}
         
-        {/* Role & Achievement */}
-        <div className="grid grid-cols-2 gap-4 text-xs">
-          <div>
-            <span className="text-muted-foreground">Role:</span>
-            <p className="font-medium">{project.role}</p>
-          </div>
-          <div>
-            <span className="text-muted-foreground">Achievement:</span>
-            <p className="font-medium">{project.achievements}</p>
-          </div>
+        {/* Role */}
+        <div className="text-xs">
+          <span className="text-muted-foreground">Role:</span>
+          <p className="font-medium">{project.role}</p>
         </div>
       </CardContent>
       
