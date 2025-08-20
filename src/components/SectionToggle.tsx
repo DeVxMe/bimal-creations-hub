@@ -8,39 +8,27 @@ interface SectionToggleProps {
 
 const SectionToggle = ({ activeSection, onToggle }: SectionToggleProps) => {
   return (
-    <div className="flex items-center justify-center mb-12">
-      <div className="flex items-center space-x-4 bg-card border border-border rounded-full p-2">
-        <Label 
-          htmlFor="section-toggle" 
-          className={`px-6 py-3 rounded-full font-medium transition-all duration-300 cursor-pointer ${
-            activeSection === "web2" 
-              ? "bg-web2 text-white shadow-web2" 
-              : "text-muted-foreground hover:text-foreground"
-          }`}
-          onClick={() => onToggle("web2")}
-        >
-          Web2 Projects
-        </Label>
-        
-        <Switch
-          id="section-toggle"
-          checked={activeSection === "web3"}
-          onCheckedChange={(checked) => onToggle(checked ? "web3" : "web2")}
-          className="data-[state=checked]:bg-web3 data-[state=unchecked]:bg-web2"
-        />
-        
-        <Label 
-          htmlFor="section-toggle" 
-          className={`px-6 py-3 rounded-full font-medium transition-all duration-300 cursor-pointer ${
-            activeSection === "web3" 
-              ? "bg-web3 text-white shadow-web3" 
-              : "text-muted-foreground hover:text-foreground"
-          }`}
-          onClick={() => onToggle("web3")}
-        >
-          Web3 Projects
-        </Label>
-      </div>
+    <div className="flex items-center gap-1 bg-muted/30 rounded-lg p-1 w-fit">
+      <button
+        onClick={() => onToggle("web2")}
+        className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
+          activeSection === "web2" 
+            ? "bg-background text-foreground shadow-sm" 
+            : "text-muted-foreground hover:text-foreground"
+        }`}
+      >
+        Personal Projects
+      </button>
+      <button
+        onClick={() => onToggle("web3")}
+        className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
+          activeSection === "web3" 
+            ? "bg-background text-foreground shadow-sm" 
+            : "text-muted-foreground hover:text-foreground"
+        }`}
+      >
+        Client Work
+      </button>
     </div>
   );
 };

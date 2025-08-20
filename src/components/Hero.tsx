@@ -11,83 +11,56 @@ const iconMap = {
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Background elements */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-background/80"></div>
-      <div className="absolute top-20 left-20 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-float"></div>
-      <div className="absolute bottom-20 right-20 w-96 h-96 bg-accent/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
-      
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-8 items-center">
-          {/* Left content */}
-          <div className="space-y-6 animate-fade-in">
-            <div className="space-y-4">
-              <div className="inline-block">
-                <span className="text-sm font-medium text-primary bg-primary/10 px-3 py-1 rounded-full">
-                  Full Stack Developer
-                </span>
-              </div>
-              <h1 className="text-5xl lg:text-7xl font-bold">
-                <span className="bg-gradient-primary bg-clip-text text-transparent">
-                  Bimal
-                </span>
-                <br />
-                <span className="text-foreground">Chalise</span>
-              </h1>
-              <p className="text-xl text-muted-foreground leading-relaxed">
-                Passionate developer crafting innovative solutions across Web2 & Web3 ecosystems. 
-                Specializing in full-stack development, blockchain technologies, and cutting-edge AI applications.
-              </p>
-            </div>
-            
-            {/* Social links */}
-            <div className="flex gap-4">
-              {socialLinks.map((link, index) => {
-                const Icon = iconMap[link.icon as keyof typeof iconMap];
-                return (
-                  <Button
-                    key={link.name}
-                    variant="outline"
-                    size="icon"
-                    className="hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-105 animate-scale-in"
-                    style={{ animationDelay: `${index * 0.1}s` }}
-                    asChild
-                  >
-                    <a href={link.url} target="_blank" rel="noopener noreferrer">
-                      <Icon className="h-5 w-5" />
-                    </a>
-                  </Button>
-                );
-              })}
-            </div>
-            
-            <div className="flex gap-4 pt-2">
-              <Button 
-                size="lg" 
-                className="bg-gradient-primary hover:shadow-primary"
-                onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+    <section className="py-20 relative">
+      {/* Header with social links */}
+      <div className="absolute top-6 right-6 z-20">
+        <div className="flex gap-3">
+          {socialLinks.map((link, index) => {
+            const Icon = iconMap[link.icon as keyof typeof iconMap];
+            return (
+              <a
+                key={link.name}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-card border border-border flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-all duration-300 hover:scale-105"
               >
-                View Projects
-              </Button>
-              <Button variant="outline" size="lg" className="hover:bg-primary hover:text-primary-foreground">
-                Download CV
-              </Button>
-            </div>
+                <Icon className="h-4 w-4" />
+              </a>
+            );
+          })}
+        </div>
+      </div>
+      
+      <div className="max-w-2xl mx-auto px-6 text-center">
+        {/* Profile image */}
+        <div className="mb-8 animate-fade-in">
+          <div className="w-32 h-32 mx-auto rounded-2xl overflow-hidden border border-border/50">
+            <img
+              src="https://res.cloudinary.com/dvb8lhl7t/image/upload/v1755016385/bimal_fwytql.jpg"
+              alt="Bimal Chalise"
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+        
+        {/* Main content */}
+        <div className="space-y-6 animate-slide-up" style={{ animationDelay: '0.2s' }}>
+          <div>
+            <h1 className="text-4xl font-bold mb-2">Hi, I'm Bimal</h1>
+            <p className="text-muted-foreground">21, Nepal | Full Stack Engineer</p>
           </div>
           
-          {/* Right content - Profile image */}
-          <div className="flex justify-center lg:justify-end animate-slide-up" style={{ animationDelay: '0.3s' }}>
-            <div className="relative">
-              <div className="w-72 h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden border-4 border-primary/20 shadow-glow">
-                <img
-                  src="https://res.cloudinary.com/dvb8lhl7t/image/upload/v1755016385/bimal_fwytql.jpg"
-                  alt="Bimal Chalise"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="absolute -top-4 -right-4 w-8 h-8 bg-primary rounded-full animate-glow"></div>
-              <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-accent rounded-full animate-glow" style={{ animationDelay: '1s' }}></div>
-            </div>
+          <p className="text-lg text-muted-foreground leading-relaxed max-w-xl mx-auto">
+            I'm a Full Stack Blockchain Developer crafting cutting-edge dApps and DeFi solutions. 
+            From writing secure smart contracts to building intuitive Web3 interfaces, I turn complex 
+            blockchain concepts into user-friendly experiences.
+          </p>
+          
+          {/* Status indicator */}
+          <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
+            <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
+            <span>Available for new opportunities</span>
           </div>
         </div>
       </div>
