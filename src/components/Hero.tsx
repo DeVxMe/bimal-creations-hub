@@ -40,10 +40,10 @@ const Hero = () => {
         </div>
       </div>
       
-      <div className="max-w-2xl mx-auto px-6 text-center">
+      <div className="max-w-2xl mx-auto px-6 text-left">
         {/* Profile image */}
         <div className="mb-8 animate-fade-in">
-          <div className="w-32 h-32 mx-auto rounded-2xl overflow-hidden border border-border/50">
+          <div className="w-32 h-32 rounded-2xl overflow-hidden border border-border/50">
             <img
               src="https://res.cloudinary.com/dvb8lhl7t/image/upload/v1755016385/bimal_fwytql.jpg"
               alt="Bimal Chalise"
@@ -56,17 +56,15 @@ const Hero = () => {
         <div className="space-y-6 animate-slide-up" style={{ animationDelay: '0.2s' }}>
           <div>
             <h1 className="text-4xl font-bold mb-2">Hi, I'm Bimal</h1>
-            <p className="text-muted-foreground">21, Nepal | Full Stack Engineer</p>
+            <p className="text-muted-foreground">21, Nepal | Full Stack | Blockchain Dev</p>
           </div>
           
-          <p className="text-lg text-muted-foreground leading-relaxed max-w-xl mx-auto">
-            I'm a Full Stack Blockchain Developer crafting cutting-edge dApps and DeFi solutions. 
-            From writing secure smart contracts to building intuitive Web3 interfaces, I turn complex 
-            blockchain concepts into user-friendly experiences.
+          <p className="text-lg text-muted-foreground leading-relaxed max-w-xl">
+            Full Stack Blockchain Developer specializing in dApps and DeFi.
           </p>
           
           {/* Status indicator */}
-          <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
+          <div className="flex items-center gap-2 text-sm text-muted-foreground">
             <div className="w-2 h-2 bg-gradient-primary rounded-full animate-pulse shadow-glow"></div>
             <span>Available for new opportunities</span>
           </div>

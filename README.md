@@ -1,73 +1,63 @@
-# Welcome to your Lovable project
+# vite_react_shadcn_ts
 
-## Project info
+A modern React project template using [Vite](https://vitejs.dev/), [shadcn/ui](https://ui.shadcn.com/), [TypeScript](https://www.typescriptlang.org/), and [Tailwind CSS](https://tailwindcss.com/).
 
-**URL**: https://lovable.dev/projects/570c019c-0cbe-43be-af4c-a0129fb48503
+## Features
 
-## How can I edit this code?
+- ⚡️ Vite for fast development and build
+- ⚛️ React 18
+- 🦄 shadcn/ui component library
+- 🎨 Tailwind CSS with tailwindcss-animate and tailwind-merge
+- 🛠 TypeScript for type safety
+- 🧩 Radix UI primitives
+- 🧰 Useful libraries: react-hook-form, zod, @tanstack/react-query, lucide-react, recharts, and more
 
-There are several ways of editing your application.
+## Getting Started
 
-**Use Lovable**
+1. **Install dependencies**
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/570c019c-0cbe-43be-af4c-a0129fb48503) and start prompting.
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 
-Changes made via Lovable will be committed automatically to this repo.
+2. **Run the development server**
 
-**Use your preferred IDE**
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+3. **Build for production**
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+   ```bash
+   npm run build
+   # or
+   yarn build
+   ```
 
-Follow these steps:
+## Project Structure
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+- `src/` - Main source code
+- `src/components/` - Reusable UI components
+- `src/pages/` - Page components (if using routing)
+- `src/lib/` - Utility libraries and helpers
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## Included Packages
 
-# Step 3: Install the necessary dependencies.
-npm i
+- [@radix-ui/react-*](https://www.radix-ui.com/primitives/docs/overview/introduction)
+- [@tanstack/react-query](https://tanstack.com/query/latest)
+- [clsx](https://github.com/lukeed/clsx)
+- [date-fns](https://date-fns.org/)
+- [lucide-react](https://lucide.dev/)
+- [react-hook-form](https://react-hook-form.com/)
+- [zod](https://zod.dev/)
+- [recharts](https://recharts.org/)
+- [sonner](https://sonner.emilkowal.ski/)
+- [vaul](https://vaul.emilkowal.ski/)
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+## License
 
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/570c019c-0cbe-43be-af4c-a0129fb48503) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+MIT

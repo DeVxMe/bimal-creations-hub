@@ -14,7 +14,7 @@ const ProjectsSection = () => {
         <div className="mb-12">
           <h2 className="text-2xl font-bold text-primary mb-3">Projects</h2>
           <p className="text-muted-foreground mb-8">
-            A collection of my work spanning from blockchain applications to full-stack projects, both personal and professional.
+            Showcasing my blockchain and full-stack projects.
           </p>
           
           <SectionToggle 

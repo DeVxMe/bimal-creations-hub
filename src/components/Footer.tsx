@@ -19,8 +19,7 @@ const Footer = () => {
               Bimal Chalise
             </h3>
             <p className="text-muted-foreground">
-              Full Stack Developer passionate about creating innovative solutions 
-              across Web2 & Web3 ecosystems.
+              Building innovative solutions in Web2 & Web3.
             </p>
           </div>
           
@@ -64,12 +63,11 @@ const Footer = () => {
         
         <div className="border-t border-border mt-8 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-muted-foreground text-sm">
-            © 2024 Bimal Chalise. All rights reserved.
+            © {new Date().getFullYear()} Bimal Chalise. All rights reserved.
           </p>
           <div className="flex items-center gap-1 text-sm text-muted-foreground">
             <span>Made with</span>
             <Heart className="h-4 w-4 text-destructive fill-current" />
-            <span>using React & Tailwind CSS</span>
           </div>
         </div>
       </div>

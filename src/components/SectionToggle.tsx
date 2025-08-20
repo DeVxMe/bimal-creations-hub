@@ -17,7 +17,7 @@ const SectionToggle = ({ activeSection, onToggle }: SectionToggleProps) => {
             : "text-muted-foreground hover:text-foreground hover:bg-muted/20"
         }`}
       >
-        Personal Projects
+        Personal Projects (web2)
       </button>
       <button
         onClick={() => onToggle("web3")}
@@ -27,7 +27,7 @@ const SectionToggle = ({ activeSection, onToggle }: SectionToggleProps) => {
             : "text-muted-foreground hover:text-foreground hover:bg-muted/20"
         }`}
       >
-        Client Work
+        Personal Projects (web3)
       </button>
     </div>
   );
