@@ -62,8 +62,38 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
+				// Colorful theme colors
+				emerald: {
+					DEFAULT: 'hsl(var(--emerald))',
+					light: 'hsl(var(--emerald-light))'
+				},
+				blue: {
+					DEFAULT: 'hsl(var(--blue))',
+					light: 'hsl(var(--blue-light))'
+				},
+				purple: {
+					DEFAULT: 'hsl(var(--purple))',
+					light: 'hsl(var(--purple-light))'
+				},
+				orange: {
+					DEFAULT: 'hsl(var(--orange))',
+					light: 'hsl(var(--orange-light))'
+				},
+				pink: {
+					DEFAULT: 'hsl(var(--pink))',
+					light: 'hsl(var(--pink-light))'
+				},
+				cyan: {
+					DEFAULT: 'hsl(var(--cyan))',
+					light: 'hsl(var(--cyan-light))'
+				},
+				// Project type colors
 				web2: 'hsl(var(--web2-accent))',
 				web3: 'hsl(var(--web3-accent))',
+				ai: 'hsl(var(--ai-accent))',
+				blockchain: 'hsl(var(--blockchain-accent))',
+				fullstack: 'hsl(var(--fullstack-accent))',
+				cli: 'hsl(var(--cli-accent))',
 				glass: {
 					bg: 'var(--glass-bg)',
 					border: 'var(--glass-border)'
@@ -71,12 +101,18 @@ export default {
 			},
 			backgroundImage: {
 				'gradient-primary': 'var(--gradient-primary)',
+				'gradient-secondary': 'var(--gradient-secondary)',
+				'gradient-accent': 'var(--gradient-accent)',
 				'gradient-web2': 'var(--gradient-web2)',
 				'gradient-web3': 'var(--gradient-web3)',
+				'gradient-ai': 'var(--gradient-ai)',
+				'gradient-blockchain': 'var(--gradient-blockchain)',
 				'gradient-dark': 'var(--gradient-dark)'
 			},
 			boxShadow: {
 				'primary': 'var(--shadow-primary)',
+				'secondary': 'var(--shadow-secondary)',
+				'accent': 'var(--shadow-accent)',
 				'web2': 'var(--shadow-web2)',
 				'web3': 'var(--shadow-web3)',
 				'glow': 'var(--shadow-glow)'

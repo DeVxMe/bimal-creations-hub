@@ -8,13 +8,13 @@ interface SectionToggleProps {
 
 const SectionToggle = ({ activeSection, onToggle }: SectionToggleProps) => {
   return (
-    <div className="flex items-center gap-1 bg-muted/30 rounded-lg p-1 w-fit">
+    <div className="flex items-center gap-1 bg-card/50 backdrop-blur-sm border border-border/50 rounded-lg p-1 w-fit">
       <button
         onClick={() => onToggle("web2")}
         className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
           activeSection === "web2" 
-            ? "bg-background text-foreground shadow-sm" 
-            : "text-muted-foreground hover:text-foreground"
+            ? "bg-gradient-primary text-white shadow-primary" 
+            : "text-muted-foreground hover:text-foreground hover:bg-muted/20"
         }`}
       >
         Personal Projects
@@ -23,8 +23,8 @@ const SectionToggle = ({ activeSection, onToggle }: SectionToggleProps) => {
         onClick={() => onToggle("web3")}
         className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
           activeSection === "web3" 
-            ? "bg-background text-foreground shadow-sm" 
-            : "text-muted-foreground hover:text-foreground"
+            ? "bg-gradient-accent text-white shadow-accent" 
+            : "text-muted-foreground hover:text-foreground hover:bg-muted/20"
         }`}
       >
         Client Work

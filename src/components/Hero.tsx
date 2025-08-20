@@ -17,13 +17,21 @@ const Hero = () => {
         <div className="flex gap-3">
           {socialLinks.map((link, index) => {
             const Icon = iconMap[link.icon as keyof typeof iconMap];
+            const colors = [
+              "hover:bg-emerald/20 hover:text-emerald hover:shadow-[0_4px_20px_-4px_hsl(142_76%_36%_/_0.3)]",
+              "hover:bg-blue/20 hover:text-blue hover:shadow-[0_4px_20px_-4px_hsl(217_91%_60%_/_0.3)]",
+              "hover:bg-purple/20 hover:text-purple hover:shadow-[0_4px_20px_-4px_hsl(271_91%_65%_/_0.3)]",
+              "hover:bg-orange/20 hover:text-orange hover:shadow-[0_4px_20px_-4px_hsl(25_95%_53%_/_0.3)]"
+            ];
+            const colorClass = colors[index % colors.length];
+            
             return (
               <a
                 key={link.name}
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-card border border-border flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-all duration-300 hover:scale-105"
+                className={`w-10 h-10 rounded-full bg-card/50 border border-border/50 backdrop-blur-sm flex items-center justify-center ${colorClass} transition-all duration-300 hover:scale-105`}
               >
                 <Icon className="h-4 w-4" />
               </a>
@@ -59,7 +67,7 @@ const Hero = () => {
           
           {/* Status indicator */}
           <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
-            <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
+            <div className="w-2 h-2 bg-gradient-primary rounded-full animate-pulse shadow-glow"></div>
             <span>Available for new opportunities</span>
           </div>
         </div>

@@ -51,38 +51,61 @@ const Experience = () => {
         </div>
         
         <div className="space-y-6">
-          {experiences.map((experience, index) => (
-            <Card 
-              key={index}
-              className="border-border/50 bg-card/50 backdrop-blur-sm hover:bg-card/70 transition-all duration-300 animate-fade-in"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <CardHeader className="pb-3">
-                <div className="flex items-start justify-between">
-                  <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded bg-primary/10 flex items-center justify-center">
-                      <Building2 className="w-4 h-4 text-primary" />
+          {experiences.map((experience, index) => {
+            const getColorClasses = (type: string) => {
+              switch (type) {
+                case "current":
+                  return {
+                    border: "border-l-emerald",
+                    icon: "bg-emerald/10 text-emerald",
+                    badge: "bg-emerald/20 text-emerald",
+                    shadow: "hover:shadow-primary"
+                  };
+                case "past":
+                  return {
+                    border: "border-l-blue",
+                    icon: "bg-blue/10 text-blue",
+                    badge: "bg-blue/20 text-blue",
+                    shadow: "hover:shadow-secondary"
+                  };
+                default:
+                  return {
+                    border: "border-l-purple",
+                    icon: "bg-purple/10 text-purple",
+                    badge: "bg-purple/20 text-purple",
+                    shadow: "hover:shadow-accent"
+                  };
+              }
+            };
+            
+            const colors = getColorClasses(experience.type);
+            
+            return (
+              <Card 
+                key={index}
+                className={`border-border/50 ${colors.border} border-l-4 bg-card/50 backdrop-blur-sm hover:bg-card/70 ${colors.shadow} transition-all duration-300 animate-fade-in`}
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <CardHeader className="pb-3">
+                  <div className="flex items-start justify-between">
+                    <div className="flex items-center gap-3">
+                      <div className={`w-8 h-8 rounded ${colors.icon} flex items-center justify-center`}>
+                        <Building2 className="w-4 h-4" />
+                      </div>
+                      <div>
+                        <CardTitle className="text-lg">{experience.title}</CardTitle>
+                        <CardDescription className="text-muted-foreground">
+                          {experience.company}
+                        </CardDescription>
+                      </div>
                     </div>
-                    <div>
-                      <CardTitle className="text-lg">{experience.title}</CardTitle>
-                      <CardDescription className="text-muted-foreground">
-                        {experience.company}
-                      </CardDescription>
+                    <div className="text-right">
+                      <span className={`px-3 py-1 rounded-full text-xs font-medium ${colors.badge}`}>
+                        {experience.duration}
+                      </span>
                     </div>
                   </div>
-                  <div className="text-right">
-                    <span className={`px-2 py-1 rounded text-xs font-medium ${
-                      experience.type === "current" 
-                        ? "bg-primary/20 text-primary" 
-                        : experience.type === "internship"
-                        ? "bg-accent/20 text-accent-foreground"
-                        : "bg-muted/20 text-muted-foreground"
-                    }`}>
-                      {experience.duration}
-                    </span>
-                  </div>
-                </div>
-              </CardHeader>
+                </CardHeader>
               
               <CardContent className="space-y-4">
                 <p className="text-sm text-muted-foreground leading-relaxed">
@@ -90,11 +113,23 @@ const Experience = () => {
                 </p>
                 
                 <div className="flex flex-wrap gap-2">
-                  {experience.techStack.map((tech) => (
-                    <Badge key={tech} variant="secondary" className="text-xs">
-                      {tech}
-                    </Badge>
-                  ))}
+                  {experience.techStack.map((tech, techIndex) => {
+                    const techColors = [
+                      "bg-emerald/20 text-emerald border-emerald/30",
+                      "bg-blue/20 text-blue border-blue/30", 
+                      "bg-purple/20 text-purple border-purple/30",
+                      "bg-orange/20 text-orange border-orange/30",
+                      "bg-pink/20 text-pink border-pink/30",
+                      "bg-cyan/20 text-cyan border-cyan/30"
+                    ];
+                    const colorClass = techColors[techIndex % techColors.length];
+                    
+                    return (
+                      <Badge key={tech} className={`text-xs border ${colorClass}`}>
+                        {tech}
+                      </Badge>
+                    );
+                  })}
                 </div>
                 
                 {experience.links && (
@@ -115,7 +150,8 @@ const Experience = () => {
                 )}
               </CardContent>
             </Card>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
