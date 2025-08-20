@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ExternalLink, Github, Eye, X } from "lucide-react";
@@ -69,16 +69,23 @@ const modalAnimOpen =
 const modalAnimClosed =
   "opacity-0 scale-90 translate-x-[200px] -translate-y-1/2 -translate-x-1/2";
 
+// Utility to check if device is mobile (viewport width <= 640px)
+const isMobile = () => {
+  if (typeof window === "undefined") return false;
+  return window.matchMedia("(max-width: 640px)").matches;
+};
+
 const ProjectCard = ({ project, index }: ProjectCardProps) => {
   const [open, setOpen] = useState(false);
 
   const colors = getProjectColors(project.category, project.section);
 
-  // Card click handler to open modal
+  // Card click handler to open modal (disabled on mobile)
   const handleCardClick = (e: React.MouseEvent) => {
     // Prevent link clicks from opening modal
     const target = e.target as HTMLElement;
     if (target.closest("a")) return;
+    if (isMobile()) return; // Prevent modal open on mobile
     setOpen(true);
   };
 

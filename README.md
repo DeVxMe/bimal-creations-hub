@@ -1,63 +1,28 @@
-# vite_react_shadcn_ts
+# Bimal Chalise
 
-A modern React project template using [Vite](https://vitejs.dev/), [shadcn/ui](https://ui.shadcn.com/), [TypeScript](https://www.typescriptlang.org/), and [Tailwind CSS](https://tailwindcss.com/).
+Hi, I'm Bimal Chalise—a passionate full-stack developer with a love for building modern, performant web applications. I specialize in React, Node.js, TypeScript, and the latest web technologies. My focus is on creating clean, maintainable code and intuitive user experiences.
 
-## Features
+## About Me
 
-- ⚡️ Vite for fast development and build
-- ⚛️ React 18
-- 🦄 shadcn/ui component library
-- 🎨 Tailwind CSS with tailwindcss-animate and tailwind-merge
-- 🛠 TypeScript for type safety
-- 🧩 Radix UI primitives
-- 🧰 Useful libraries: react-hook-form, zod, @tanstack/react-query, lucide-react, recharts, and more
+- 💻 Full-Stack Developer
+- ⚛️ React & TypeScript enthusiast
+- 🛠 Experienced with Node.js, Tailwind CSS, and modern UI libraries
+- 🚀 Always learning and exploring new technologies
 
-## Getting Started
+## What I Do
 
-1. **Install dependencies**
+I design and develop scalable web applications, contribute to open source, and enjoy collaborating with other developers. My projects often leverage tools like Vite, shadcn/ui, Radix UI, and a variety of helpful libraries to deliver robust solutions.
 
-   ```bash
-   npm install
-   # or
-   yarn install
-   ```
+## Skills & Tools
 
-2. **Run the development server**
+- **Frontend:** React, TypeScript, Tailwind CSS, shadcn/ui, Radix UI, Vite
+- **Backend:** Node.js, Express, REST APIs
+- **Other:** React Hook Form, Zod, @tanstack/react-query, Lucide React, Recharts, Sonner, Vaul, and more
 
-   ```bash
-   npm run dev
-   # or
-   yarn dev
-   ```
+## Get in Touch
 
-3. **Build for production**
+I'm always open to new opportunities, collaborations, or just a chat about tech. Feel free to reach out!
 
-   ```bash
-   npm run build
-   # or
-   yarn build
-   ```
+---
 
-## Project Structure
-
-- `src/` - Main source code
-- `src/components/` - Reusable UI components
-- `src/pages/` - Page components (if using routing)
-- `src/lib/` - Utility libraries and helpers
-
-## Included Packages
-
-- [@radix-ui/react-*](https://www.radix-ui.com/primitives/docs/overview/introduction)
-- [@tanstack/react-query](https://tanstack.com/query/latest)
-- [clsx](https://github.com/lukeed/clsx)
-- [date-fns](https://date-fns.org/)
-- [lucide-react](https://lucide.dev/)
-- [react-hook-form](https://react-hook-form.com/)
-- [zod](https://zod.dev/)
-- [recharts](https://recharts.org/)
-- [sonner](https://sonner.emilkowal.ski/)
-- [vaul](https://vaul.emilkowal.ski/)
-
-## License
-
-MIT
+MIT License
