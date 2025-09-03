@@ -4,7 +4,7 @@ import ProjectCard from "./ProjectCard";
 import SectionToggle from "./SectionToggle";
 
 const ProjectsSection = () => {
-  const [activeSection, setActiveSection] = useState<"web2" | "web3">("web2");
+  const [activeSection, setActiveSection] = useState<"web2" | "web3">("web3");
   
   const filteredProjects = projects.filter(project => project.section === activeSection);
   

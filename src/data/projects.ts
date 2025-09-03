@@ -195,6 +195,39 @@ export const projects: Project[] = [
     viewPost: "https://www.linkedin.com/posts/bimalxme_decentralized-web3-infrastructure-activity-7361036134396624896-o-Vh?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFTpivIBeq93-Nbc3ptFIQbb-4JdPUXjQiI"
   },
   {
+    title: "PartialEX",
+    desc: "A partially centralized exchange platform combining centralized user management with decentralized liquidity. Built using Next.js App Router with OAuth, integrated JupSwap for token swaps, and real-time price APIs for market data.",
+    tech_stacks: [
+      "Next.js ",
+      "OAuth",
+      "JupSwap API",
+      "Price APIs",
+      "Prisma ORM",
+      "TypeScript",
+      "Tailwind CSS",
+      "Node.js",
+      "PostgreSQL"
+    ],
+    repo_url: "https://github.com/BiMalxMe/CEX",
+    role: "Full Stack Dev",
+    achievements: "Designed and implemented a hybrid CEX-DEX system with secure OAuth login, token swaps via JupSwap, and real-time pricing integration.",
+    category: "Web3 / Hybrid Exchange",
+    status: "In Progress",
+    section: "web3",
+    features: [
+      "OAuth-based secure authentication",
+      "Token swap via JupSwap API",
+      "Live price data from APIs",
+      "Partial centralization with backend control",
+      "Next.js App Router architecture",
+      "PostgreSQL + Prisma for data storage",
+      "Responsive UI styled with Tailwind CSS"
+    ],
+    viewPost: "https://www.linkedin.com/posts/bimalxme_nextjs-reactjs-tailwindcss-activity-7368473120459948033-NRm_?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFTpivIBeq93-Nbc3ptFIQbb-4JdPUXjQiI"
+    // live_demo: "https://bimalxpartialex.vercel.app", // attach when available
+  }
+,  
+  {
     title: "Solana Staking dApp",
     desc: "A decentralized staking application on Solana that enables users to stake tokens, earn rewards, and manage their stakes securely.",
     tech_stacks: ["Rust","Anchor", "Solana", "Tailwind", "Phantom","Nodejs"],
